@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <style>
+       html, body{
+           background-color: #f0f0f0;
+       }
+
+       .form {
+           display: block;
+           margin: 0 auto;
+           width: 700px;
+       }
+       .input {
+           border: 1px solid #eee;
+           height: 40px;
+           font-size: 18px;
+       }
+
+       .button {
+           display: inline-block;
+           border: 1px solid #f7f7f7;
+           background-color: #ffffff;
+           border-radius: 3px;
+           padding: 8px 15px;
+           cursor: pointer;
+           outline: none;
+       }
+       .input {
+           width: 600px;
+       }
+    </style>
+</head>
+<body>
+<form class="form" method="post">
+    <input class="input" name="newTask" type="text" placeholder="напиши сюда задачу...">
+    <button type="submit" class="button">Add Todo</button>
+</form>
+
+    <h1>Список твоих задач {{.Login}}: </h1>
+    {{range $_, $element  := .Tasks}}
+    Task: {{$element}}
+</form>
+<br><br>
+    {{end}}
+</body>
+</html>
